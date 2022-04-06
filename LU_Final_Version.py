@@ -32,16 +32,19 @@ def instructions():
     print()
     print("Choose a starting amount to play with - must be between $1 and $10")
     print()
-    print("Then press <enter> to play. You Will get a random token which might be \n"
+    print("Then press <enter> to play. "
+          "You Will get a random token which might be \n"
           "A horse, a zebra, a donkey, or a Unicorn")
     print()
-    print("It costs $1 to play each round but, depending on your prize, you could win some of your money back.\n"
+    print("It costs $1 to play each round but, depending on your prize, "
+          "you could win some of your money back.\n"
           "Payout Amounts:\n"
           "\tUnicorn: $5 (balance increases by $4\n"
           "\tHorse: $0.50 (balance decreases by $0.50\n"
           "\tZebra: $0.50 (balance decreases by $0.50\n"
           "\tDonkey: $0.00 (balance decreases by $1\n"
-          "See if you can avoid donkeys, get the unicorns, and finish with more money than you started with")
+          "See if you can avoid donkeys, get the unicorns,"
+          " and finish with more money than you started with")
 
     print("*" * 50)
     print()
@@ -116,7 +119,10 @@ def generate_token(balance):
             print("\nSorry but you have run out of money")
             play_again = "x"
         else:
-            play_again = input("\nDo you want to play another round?\n<enter> to play again or 'X' to quit").lower()
+            play_again = input("\nDo you want to "
+                               "play another round?"
+                               "\n<enter> to play again "
+                               "or 'X' to quit").lower()
         print()
     return balance
 
@@ -132,7 +138,8 @@ def formatter(symbol, text):
 # Main routine go here...
 print(formatter("-", "Welcome to the Lucky Unicorn Game"))
 print()
-played_before = yes_no("Have you played the game before (Y for yes/N for No): ")
+played_before = yes_no("Have you played the game before "
+                       "(Y for yes/N for No): ")
 
 if played_before == "No":
     instructions()
