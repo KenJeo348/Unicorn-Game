@@ -1,5 +1,5 @@
-"""LU base component - based on 00_LU_base_v2
-Adding instructions to instructions function and further text decoration
+"""LU Final Version
+This is the final version of the Lucky Unicorn Game.
 """
 import random
 
@@ -80,7 +80,8 @@ def generate_token(balance):
     # Testing loop to generate 5 tokens
     while play_again != "x":
         rounds_played += 1  # keep track of rounds
-        print(f"Round {rounds_played}\n")
+        print(formatter("$", f"Round {rounds_played}"))
+        print()
         number = random.randint(1, 100)  # can only be a donkey
 
         # adjust balance
@@ -148,6 +149,7 @@ if played_before == "No":
 # ask the user how much they want to play with
 starting_balance = num_check("How much would you like to play with? $", 1, 10)
 print(f"You are playing with ${starting_balance}")
+print()
 
 closing_balance = generate_token(starting_balance)
 print("Thanks for playing")
